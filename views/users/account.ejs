@@ -1,0 +1,32 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+        <h2>Welcome, <%= currentUser.username %>!</h2>
+        <hr>
+        <h4>Your Bookings</h4>
+        
+        <% if(bookings.length === 0) { %>
+            <p>You haven't booked any trips yet. <a href="/listings">Start exploring!</a></p>
+        <% } else { %>
+            <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 mt-3">
+                <% for(let booking of bookings) { %>
+                    <div class="card col listing-card mb-3">
+                        <img src="<%= booking.listing.image.url %>" class="card-img-top" alt="listing_image" style="height: 15rem">
+                        <div class="card-body mt-2">
+                            <h5 class="card-title"><b><%= booking.listing.title %></b></h5>
+                            <p class="card-text">
+                                <b>Check-in:</b> <%= booking.checkIn.toLocaleDateString("en-IN") %><br>
+                                <b>Check-out:</b> <%= booking.checkOut.toLocaleDateString("en-IN") %><br>
+                                <b>Total Paid:</b> &#8377;<%= booking.totalPrice.toLocaleString("en-IN") %><br>
+                                <span class="badge bg-success"><%= booking.status %></span>
+                            </p>
+                            <form method="POST" action="/account/bookings/<%= booking._id %>?_method=DELETE">
+                                <button class="btn btn-sm btn-danger mt-2">Cancel Booking</button>
+                            </form>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+</div>

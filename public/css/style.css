@@ -1,0 +1,221 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.container {
+  flex: 1;
+}
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+.nav-link {
+  color: #222222 !important;
+}
+
+/*Footer*/
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  margin-right: 1rem;
+  font-size: 1.2rems;
+}
+.f-info {
+  text-align: center;
+  height: 8rems;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+/*Cards*/
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rems;
+}
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+.card-body {
+  padding: 0 !important;
+}
+.card-text {
+  font-weight: 400 !important;
+}
+.listing-link {
+  text-decoration: none;
+}
+/*Card Effect*/
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+/*New Page*/
+
+.add-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/*Edit Page*/
+.edit-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/*Show Page*/
+.show-img {
+  height: 30vh;
+}
+.btns {
+  display: flex;
+}
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* Edit Image */
+.image{
+  height: 20rem;
+}
+/* Maps */
+#map {
+  height:400px;
+  width:80vp;
+}
+.hover-marker {
+    /* Default Pin Icon */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/447/447031.png'); 
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    color: #fe424d;
+  }
+
+  .hover-marker:hover {
+    /* Home Icon on Hover */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/25/25694.png'); 
+    color: #fe424d;
+  }
+/* Ensures the text positions itself relative to the icon */
+.hover-marker {
+  position: relative; 
+}
+
+/* The hidden text tooltip */
+.marker-text {
+  visibility: hidden;
+  background-color: #222222;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%; /* Pushes the text above the icon */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the text perfectly */
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  font-size: 0.85rem;
+}
+
+/* Shows the text when hovering over the marker */
+.hover-marker:hover .marker-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*Account*/
+.account{
+  size:8rem !important;
+}
+
+/* Category button */
+#filters{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filter{
+  text-align: center;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  opacity: 0.7;
+}
+.filter:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+.filter p{
+  font-size: 0.8rem;
+}
+.tax-info{
+  display:none;
+}
+.tax-toggle{
+  border:1px solid black;
+  border-radius: 1rem;
+  height: 3.2rem;
+  padding: 1rem;
+  margin-left: 15rem;
+  display: flex;
+  align-items: center;
+}
+.filter-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Search bar */
+.search-inp{
+  width:400px !important;
+  border-radius: 25px !important;
+  padding: 0.5rem 3rem 0.5rem 3rem !important;
+}
+
+.btn-search{
+  color: #fe424d !important;
+  border-color: #fe424d !important;
+  border-radius: 25px !important;
+  padding: 0 1rem 0 1rem;
+}
+
+.btn-search:hover{
+  background-color: #fe424d !important;
+  color: #fff !important;
+}
+
+.btn-search i{
+  margin-right:0.2rem;
+}
