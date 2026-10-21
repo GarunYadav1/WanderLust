@@ -31,7 +31,7 @@ const initDB = async () => {
       .send();
 
     initData.data[i].geometry = response.body.features[0].geometry;
-    initData.data[i].owner = "6ad7bef37f0237d77368f350"; // Your specific owner ID
+    initData.data[i].owner = "6acf4b6f21297189efc20632"; // Your specific owner ID
   }
   await Listing.insertMany(initData.data);
   console.log("data was initialize");
