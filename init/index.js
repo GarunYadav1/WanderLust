@@ -7,11 +7,10 @@ const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
 const mapToken = process.env.MAP_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 const dbUrl = process.env.ATLASDB_URL
-// const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 main()
   .then(() => {
     console.log("connected to DB");
-    initDB();
   })
   .catch((err) => {
     console.log(err);
@@ -38,4 +37,4 @@ const initDB = async () => {
   console.log("data was initialize");
 };
 
-
+initDB();
