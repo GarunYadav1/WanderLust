@@ -111,50 +111,6 @@ body {
   height:400px;
   width:80vp;
 }
-.hover-marker {
-    /* Default Pin Icon */
-    background-image: url('https://cdn-icons-png.flaticon.com/512/447/447031.png'); 
-    background-size: cover;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    color: #fe424d;
-  }
-
-  .hover-marker:hover {
-    /* Home Icon on Hover */
-    background-image: url('https://cdn-icons-png.flaticon.com/512/25/25694.png'); 
-    color: #fe424d;
-  }
-/* Ensures the text positions itself relative to the icon */
-.hover-marker {
-  position: relative; 
-}
-
-/* The hidden text tooltip */
-.marker-text {
-  visibility: hidden;
-  background-color: #222222;
-  color: white;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 10px;
-  position: absolute;
-  z-index: 1;
-  bottom: 120%; /* Pushes the text above the icon */
-  left: 50%;
-  transform: translateX(-50%); /* Centers the text perfectly */
-  opacity: 0;
-  transition: opacity 0.3s;
-  white-space: nowrap;
-  font-size: 0.85rem;
-}
-
-/* Shows the text when hovering over the marker */
-.hover-marker:hover .marker-text {
-  visibility: visible;
-  opacity: 1;
-}
 
 /*Account*/
 .account{
