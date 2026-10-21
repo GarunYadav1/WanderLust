@@ -11,6 +11,7 @@ const dbUrl = process.env.ATLASDB_URL
 main()
   .then(() => {
     console.log("connected to DB");
+    initDB();
   })
   .catch((err) => {
     console.log(err);
@@ -37,4 +38,4 @@ const initDB = async () => {
   console.log("data was initialize");
 };
 
-initDB();
+
